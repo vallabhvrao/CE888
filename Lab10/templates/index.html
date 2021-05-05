@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  input[type=number],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+  }
+
+  label {
+    color: black;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  title-center {
+    text-align: center;
+  }
+
+  form-container {
+    margin-right: 30%;
+    margin-left: 30%;
+    align-content: center;
+  }
+</style>
+
+
+<body>
+  <h1 class="title-center">Heart Disease Detection Exercise</h1>
+
+  <div class="form-container">
+
+    <form method="POST">
+      <form action="/action_page.php">    
+      <label for="age">Please enter Age</label>
+      <input type="number" id="age" name="age" placeholder="Age" min="1" max="120" required>
+
+      <label for="gender">Please choose your gender</label>
+      <select name="gender">
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select>
+
+      <label for="cp">Please enter Chest Pain Type</label>
+      <select name="cp">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <label for="trest_bps">Please enter Resting Blood Pressure</label>
+      <input type="number" id="trest_bps" name="trest_bps" placeholder="minimum value is 70" min="70" required>
+
+      <label for="chol">Please enter Serum Cholestoral in mg/dl</label>
+      <input type="number" id="chol" name="chol" placeholder="minimum value is 100 " min="100" required>
+
+      <label for="fbs">Please enter Fasting Blood Sugar</label>
+      <select name="fbs">
+        <option value="1">&gt; 120 mg/dl</option>
+        <option value="0">&lt; 120 mg/dl</option>
+      </select>
+
+
+      <label for="restecg">Please enter Resting Electrocardiographic </label>
+      <select name="restecg">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+
+      <label for="thalach">Maximum Heart Rate Achieved</label>
+      <input type="number" id="thalach" name="thalach" placeholder="Please enter values between 50 and 230" min="50" max="230"
+        required>
+
+      <label for="exang">Please enter Exercise Induced Angina</label>
+      <select name="exang">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <label for="old_peak">Please enter ST Depression Induced by Exercise Relative to Rest</label>
+      <input type="number" id="old_peak" name="old_peak" placeholder="Please enter value between 0 and 10" min="0" max="10" step="0.1"
+        required>
+
+      <label for="slope">Please enter The Slope of the Peak Exercise ST Segment</label>
+      <select name="slope">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+
+      <label for="ca">Number of Major Vessels (0-3) Colored by Flourosopy</label>
+      <select name="ca">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="2">3</option>
+        <option value="2">4</option>
+      </select>
+
+      <label for="thal">Thalassemia</label>
+      <select name="thal">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <label for="req_model">Choose a Model</label>
+      <select name="req_model">
+        <option value="Logistic">Logistic Regression</option>
+        <option value="RandomForest">Random Forest</option>
+        <option value="SVM">SVM</option>
+      </select>
+
+
+      <input type="submit" value="Predict">
+    </form>
+    </form>
+
+    <form method="GET">
+      <h2 class="title-center">{{sale_making}}</h2>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
